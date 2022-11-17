@@ -1,0 +1,23 @@
+header{
+    background-color: rgb(154, 241, 246);
+}
+span{
+    font-size: 20px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.container{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo img{
+    max-width: 80px;
+}
+.searchbar{
+   height: 50%;
+}
