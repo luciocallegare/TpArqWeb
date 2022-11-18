@@ -1,23 +1,12 @@
-header{
-    background-color: rgb(154, 241, 246);
+@font-face {
+    font-family: "Renaiss Italic";
+    src: url('../../assets/fonts/Renaiss-Italic.ttf');
 }
-span{
+.nomLogo{
+    font-family: "Renaiss Italic";
     font-size: 20px;
 }
-.logo{
-    display: flex;
-    align-items: center;
-}
-.container{
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.logo img{
+.navbar-brand img{
     max-width: 80px;
 }
-.searchbar{
-   height: 50%;
-}
+
