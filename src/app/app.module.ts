@@ -4,7 +4,6 @@ import { MatCardModule } from '@angular/material/card';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './footer/footer.component';
@@ -24,6 +23,7 @@ import {VeganRecipesPageComponent} from './pages/vegan-recipes-page/vegan-recipe
     AppRoutingModule,
     BrowserModule,
     HttpClientModule,
+    MatCardModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'recipes', component:  VeganRecipesPageComponent },

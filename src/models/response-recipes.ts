@@ -1,17 +1,9 @@
 export interface ResponseRecipes {
     count:   number;
-    results: recipe[];
+    results: Recipe[];
 }
-// export class ResponseRecipes {
-//     count:   number;
-//     results: recipe[];
 
-//     constructor() {
-        
-//     }
-// }
-
-export interface recipe {
+export interface Recipe {
     is_one_top:               boolean;
     cook_time_minutes:        number | null;
     promotion:                string;
