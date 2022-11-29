@@ -3,6 +3,10 @@
     margin-top: 20px;
     color:rgba(206, 78, 78, 1) ;
 }
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .card{
     padding-top: 20px;

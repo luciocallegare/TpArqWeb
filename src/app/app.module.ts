@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import {VeganRecipesPageComponent} from './pages/vegan-recipes-page/vegan-recipes-page.component';
+import { SearchComponent } from './pages/search/search.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {VeganRecipesPageComponent} from './pages/vegan-recipes-page/vegan-recipe
     HeaderComponent,
     HomeComponent,
     VeganRecipesPageComponent,
+    SearchComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -27,6 +29,7 @@ import {VeganRecipesPageComponent} from './pages/vegan-recipes-page/vegan-recipe
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'recipes', component:  VeganRecipesPageComponent },
+      { path: 'search/:q', component: SearchComponent}
     ]),
   ],
   providers: [],

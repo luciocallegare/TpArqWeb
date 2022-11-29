@@ -24,3 +24,19 @@ p{
 .botones{
     margin-top: 50px;
 }
+/* a:hover::before {
+    background: url(https://icons.iconarchive.com/icons/custom-icon-design/mono-general-2/512/copy-icon.png);
+    background-size: 20px 20px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: "";
+  }
+  a:hover::after {
+    background: url(../../../assets/img/firulete.png);
+    background-size: 30px 30px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    content: "";
+  } */
