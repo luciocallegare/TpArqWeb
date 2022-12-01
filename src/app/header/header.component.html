@@ -12,8 +12,8 @@
         </ul>
         <div>
             <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Buscar</button>
+              <input class="form-control me-2" type="search" placeholder="Search" name="query" aria-label="Search" [(ngModel)]="query">
+              <button class="btn btn-outline-success" [disabled]="query === ''" type="submit" (click)="onSubmit()">Buscar</button>
               <a class="btn btn-outline-success btn-sm btn-avz" href="#">Busqueda Avanzada</a>
             </form>
         </div>

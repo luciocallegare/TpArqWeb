@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import {VeganRecipesPageComponent} from './pages/vegan-recipes-page/vegan-recipes-page.component';
 import { SearchComponent } from './pages/search/search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { SearchComponent } from './pages/search/search.component';
     BrowserModule,
     HttpClientModule,
     MatCardModule,
+    FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'recipes', component:  VeganRecipesPageComponent },

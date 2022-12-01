@@ -19,7 +19,7 @@ export class RecipesService {
 
   constructor(private http:HttpClient) {}
 
-  fetchRecipes():Observable<any>{
+  fetchRecipes(q:any):Observable<any>{
     const url= 'https://tasty.p.rapidapi.com/recipes/list';
     const headers= {
       'X-RapidAPI-Key': '6c0973798bmsh5fbea7355e8f3dfp14c46djsne25b27a5e261',
@@ -27,6 +27,7 @@ export class RecipesService {
     };
     let queryParams = new HttpParams();
     queryParams = queryParams.append("language","esp" );
+    queryParams = queryParams.append("tags",q );
     return this.http.get(url,{headers:headers, params:queryParams},);
   }
 

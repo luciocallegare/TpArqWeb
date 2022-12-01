@@ -3,6 +3,13 @@ export interface ResponseRecipes {
     results: Recipe[];
 }
 
+export interface RecipeListed {
+    id : number;
+    image: String;
+    imageType: String;
+    title: String;
+}
+
 export interface Recipe {
     is_one_top:               boolean;
     cook_time_minutes:        number | null;
