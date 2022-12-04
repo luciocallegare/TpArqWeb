@@ -9,9 +9,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './pages/home/home.component';
-import {VeganRecipesPageComponent} from './pages/vegan-recipes-page/vegan-recipes-page.component';
+import { VeganRecipesPageComponent } from './pages/vegan-recipes-page/vegan-recipes-page.component';
 import { SearchComponent } from './pages/search/search.component';
 import { FormsModule } from '@angular/forms';
+import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
 
 @NgModule({
   declarations: [
@@ -19,15 +20,16 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     HeaderComponent,
     HomeComponent,
-    VeganRecipesPageComponent,
     SearchComponent,
+    VeganRecipesPageComponent,
+    WelcomePageComponent,
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     MatCardModule,
-    FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'recipes', component:  VeganRecipesPageComponent },

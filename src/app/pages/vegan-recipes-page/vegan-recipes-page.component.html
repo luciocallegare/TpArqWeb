@@ -5,7 +5,11 @@
 <div class="row">
     <div *ngFor="let recipe of recipes" class="col-6">
         <mat-card class="card">
-            <img  mat-card-image [src]="recipe.thumbnail_url" [alt]="recipe.name" class="image">
+            
+            <div class="imageDiv">
+                <img  mat-card-image [src]="recipe.thumbnail_url" [alt]="recipe.name">
+            </div>
+            
             <h6 class="cardTitle">
                 <!-- TODO: adapt these lines to the recipe list -->
                 {{ recipe.name }}
@@ -15,7 +19,10 @@
             
             
             <mat-card-content class="content">
-              <p *ngIf="recipe.description">Description: {{ recipe.description }}</p> 
+                <p *ngIf="recipe.description;else empty_box">Description: {{ recipe.description }}</p> 
+                <ng-template #empty_box>
+                    <div class="emptyBox">&nbsp;</div>
+                </ng-template>
             </mat-card-content>
         </mat-card>
     </div>
