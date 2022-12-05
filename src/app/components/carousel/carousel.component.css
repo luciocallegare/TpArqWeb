@@ -1,0 +1,24 @@
+.picsum-img-wrapper{
+    display: block;
+    overflow:hidden;
+    padding-left: 195px;
+    padding-right: 195px;
+    background-color: rgba(11, 9, 9, 0.395);
+    margin-bottom: 20px;
+    filter: blur();
+}
+img{  max-height: 400px;
+    min-width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: top;}
+.carousel-caption{
+    background: rgba(0,0,0,.4);
+    padding-top: 350px;
+    color: #fff;
+    font-size: 10vw;
+    font-weight: 100;
+    text-align: center;
+    line-height: 1;
+    object-position: bottom;
+}

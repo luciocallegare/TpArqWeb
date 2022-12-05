@@ -14,10 +14,12 @@ import { HomeComponent } from './pages/home/home.component';
 import { VeganRecipesPageComponent } from './pages/vegan-recipes-page/vegan-recipes-page.component';
 import { SearchComponent } from './pages/search/search.component';
 import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CarouselComponent,
     FooterComponent,
     HeaderComponent,
     HomeComponent,
@@ -33,7 +35,8 @@ import { WelcomePageComponent } from './pages/welcome-page/welcome-page.componen
     MatCardModule,
     NgbModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent },
+      { path: '', component: WelcomePageComponent },
+      { path: 'home', component: HomeComponent },
       { path: 'recipes', component:  VeganRecipesPageComponent },
       { path: 'search/:q', component: SearchComponent}
     ]),
