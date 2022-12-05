@@ -15,10 +15,7 @@ export class VeganRecipesPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.recipesService.fetchRecipes('vegan').subscribe(
-      //TODO: cast response to ResponseRecipes
       (response: ResponseRecipes)=>{
-        //TODO: remove print
-        console.log(response);
         this.recipes=response.results;
         
       }
