@@ -11,54 +11,69 @@ export interface RecipeListed {
 }
 
 export interface Recipe {
-    is_one_top:               boolean;
-    cook_time_minutes:        number | null;
-    promotion:                string;
-    keywords:                 string;
-    show:                     string;
-    servings_noun_plural:     string;
+    approved_at:              number;
+    aspect_ratio:             string;
+    beauty_url:               null | string;
+    brand_id:                 number | null;
+    brand:                    string | null;
+    buzz_id:                  null;
     canonical_id:             string;
-    show_id:                  number;
+    compilations:             string;
+    cook_time_minutes:        number | null;
+    country:                  string;
+    created_at:               number;
+    credits:                  string;
+    description:              string;
     draft_status:             string;
+    facebook_posts:           any[];
+    id:                       number;
+    inspired_by_url:          null;
+    instructions:             Steps[];
+    is_one_top:               boolean;
+    is_shoppable:             boolean;
+    keywords:                 string;
+    language:                 string;
+    name:                     string;
+    num_servings:             number;
+    nutrition_visibility:     string;
+    nutrition:                string;
+    original_video_url:       null | string;
+    prep_time_minutes:        number | null;
+    promotion:                string;
+    renditions:               string;
     sections:                 string;
+    seo_title:                string;
+    servings_noun_plural:     string;
+    servings_noun_singular:   string;
+    show_id:                  number;
+    show:                     string;
+    slug:                     string;
     tags:                     string;
     thumbnail_alt_text:       string;
-    credits:                  string;
-    topics:                   string;
-    slug:                     string;
-    servings_noun_singular:   string;
-    video_url:                null | string;
-    prep_time_minutes:        number | null;
-    name:                     string;
-    buzz_id:                  null;
     thumbnail_url:            string;
-    is_shoppable:             boolean;
-    video_id:                 number | null;
-    compilations:             string;
-    num_servings:             number;
-    brand:                    string | null;
-    nutrition:                string;
     tips_and_ratings_enabled: boolean;
-    video_ad_content:         null | string;
-    seo_title:                string;
-    country:                  string;
-    instructions:             string;
-    language:                 string;
-    brand_id:                 number | null;
-    aspect_ratio:             string;
-    description:              string;
-    inspired_by_url:          null;
+    topics:                   string;
     total_time_minutes:       number | null;
-    nutrition_visibility:     string;
-    facebook_posts:           any[];
-    beauty_url:               null | string;
     total_time_tier:          string;
-    yields:                   string;
-    original_video_url:       null | string;
     updated_at:               number;
-    renditions:               string;
-    created_at:               number;
-    approved_at:              number;
-    user_ratings:             string;
+    user_ratings:             Rating;
+    video_ad_content:         null | string;
+    video_id:                 number | null;
+    video_url:                null | string;
+    yields:                   string;
+}
+
+export interface Rating {
+    count_negative:           null|number;
+    count_positive:           null|number;
+    score:                    null|number;
+}
+
+export interface Steps{
+    display_text:             string;
+    end_time:                 number; 
     id:                       number;
+    position:                 number;
+    start_time:               number;
+    temperature:              null|number;
 }

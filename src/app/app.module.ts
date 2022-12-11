@@ -9,14 +9,15 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
+import { LoaderComponent } from './components/loader/loader.component';
 import { RecipeDetailPageComponent } from './pages/recipe-detail-page/recipe-detail-page.component';
 import { SearchComponent } from './pages/search/search.component';
 import { VeganRecipesPageComponent } from './pages/vegan-recipes-page/vegan-recipes-page.component';
 import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
-import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { LoaderComponent } from './components/loader/loader.component';
   imports: [
     AppRoutingModule,
     BrowserModule,
+    FontAwesomeModule,
     FormsModule,
     HttpClientModule,
     MatCardModule,
