@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CommunicateService } from '../services/communicate.service';
+import { CommunicateService } from '../../services/communicate.service';
 
 @Component({
   selector: 'app-header',

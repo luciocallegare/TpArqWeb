@@ -1,0 +1,13 @@
+<div *ngIf="recipe;else not_found" style="min-height:700px;">
+    <h1>{{recipe!.name}}</h1>
+    <hr>
+    <img [src]="recipe.thumbnail_url" [alt]="recipe.name">
+    <h5><strong>Description: </strong></h5>
+    <span class="text">{{recipe.description}}</span>
+</div>
+
+<ng-template #not_found>
+    <app-loader></app-loader>
+</ng-template>
+
+

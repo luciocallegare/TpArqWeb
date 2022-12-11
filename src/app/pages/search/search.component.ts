@@ -13,16 +13,18 @@ import { Subscription } from 'rxjs';
 export class SearchComponent implements OnInit {
 
   
-  constructor(private activatedRoute:ActivatedRoute,private recipesService: RecipesService, private Service: CommunicateService) {
+  constructor(
+    private activatedRoute:ActivatedRoute,
+    private recipesService: RecipesService, 
+    private Service: CommunicateService) {
     // subscribe to sender component messages
-    this.subscriptionName= this.Service.getUpdate().subscribe
-    (async message => { //message contains the data sent from service
-      this.query = message;
-      await this.getRecipies(this.query)
-      window.location.reload()
-    });
-   }
-  
+      this.subscriptionName= this.Service.getUpdate().subscribe
+      (async message => { //message contains the data sent from service
+        this.query = message;
+        await this.getRecipies(this.query)
+        window.location.reload()
+      });
+    }
   recipies : RecipeListed[] | undefined
   query: any
   private subscriptionName: Subscription
@@ -31,7 +33,6 @@ export class SearchComponent implements OnInit {
     let query = this.activatedRoute.snapshot.paramMap.get('q')
     console.log(query)
     await this.getRecipies(query)
-
   }
 
   async getRecipies(query: String | null){

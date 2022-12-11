@@ -11,13 +11,12 @@ export class VeganRecipesPageComponent implements OnInit {
 
   constructor(private recipesService: RecipesService) { }
 
-  recipes: Recipe[] | undefined;
+  recipes: Recipe[]|undefined;
 
   ngOnInit(): void {
     this.recipesService.fetchRecipes('vegan').subscribe(
-      (response: ResponseRecipes)=>{
-        this.recipes=response.results;
-        
+      (response: ResponseRecipes) => {
+        this.recipes= response.results;
       }
     );
   }

@@ -1,29 +1,25 @@
 
-<h1 class="pageTitle">Recetas</h1>
+<h1 class="pageTitle">Vegan Recipes</h1>
 <hr>
-<!-- TODO: add for each and matcards with recipes descriptions  -->
-<div class="row">
-    <div *ngFor="let recipe of recipes" class="col-6">
-        <mat-card class="card">
-            
-            <div class="imageDiv">
-                <img  mat-card-image [src]="recipe.thumbnail_url" [alt]="recipe.name">
+    <div *ngIf="recipes;else not_found">
+        <div class="row">
+            <div *ngFor="let recipe of recipes" class="col-6">
+                <mat-card class="card" [title]="recipe.name + ' details'" [routerLink]="['/detail', recipe.id]">
+                    <div class="imageDiv">
+                        <img  mat-card-image [src]="recipe.thumbnail_url" [alt]="recipe.name">
+                    </div>
+                    <h6 class="cardTitle"> {{ recipe.name }} </h6>
+                    <mat-card-content class="content">
+                        <p *ngIf="recipe.description;else empty_box">Description: {{ recipe.description }}</p> 
+                        <ng-template #empty_box>
+                            <div class="emptyBox">&nbsp;</div>
+                        </ng-template>
+                    </mat-card-content>
+                </mat-card>
             </div>
-            
-            <h6 class="cardTitle">
-                <!-- TODO: adapt these lines to the recipe list -->
-                {{ recipe.name }}
-                <!-- [title]="recipe.name + ' details'"  -->
-                <!-- [routerLink]="['/products', product.id]" -->
-            </h6>
-            
-            
-            <mat-card-content class="content">
-                <p *ngIf="recipe.description;else empty_box">Description: {{ recipe.description }}</p> 
-                <ng-template #empty_box>
-                    <div class="emptyBox">&nbsp;</div>
-                </ng-template>
-            </mat-card-content>
-        </mat-card>
+        </div>
     </div>
-</div>
+
+<ng-template #not_found>
+    <app-loader></app-loader>
+</ng-template>
