@@ -36,9 +36,12 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     NgbModule,
     RouterModule.forRoot([
       { path: '', component: WelcomePageComponent },
-      { path: 'home', component: HomeComponent },
+      { path: 'home', 
+        component: HomeComponent, 
+        
+      },
       { path: 'recipes', component:  VeganRecipesPageComponent },
-      { path: 'search/:q', component: SearchComponent}
+      { path: 'search/:q', component: SearchComponent }
     ]),
   ],
   providers: [],
