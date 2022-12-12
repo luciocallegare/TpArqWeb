@@ -1,0 +1,15 @@
+label{
+    padding-top: 20px;
+}
+input{
+    margin-bottom: 20px;
+}
+button{
+    background-color: rgb(253, 143, 0);
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    width: 200px;
+}

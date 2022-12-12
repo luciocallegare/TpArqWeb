@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -12,10 +13,11 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
-import { HomeComponent } from './pages/home/home.component';
+import { HomeComponent } from './pages/home-page/home.component';
 import { LoaderComponent } from './components/loader/loader.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RecipeDetailPageComponent } from './pages/recipe-detail-page/recipe-detail-page.component';
-import { SearchComponent } from './pages/search/search.component';
+import { SearchComponent } from './pages/search-page/search.component';
 import { VeganRecipesPageComponent } from './pages/vegan-recipes-page/vegan-recipes-page.component';
 import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
 
@@ -31,6 +33,7 @@ import { WelcomePageComponent } from './pages/welcome-page/welcome-page.componen
     VeganRecipesPageComponent,
     WelcomePageComponent,
     LoaderComponent,
+    LoginPageComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -40,11 +43,13 @@ import { WelcomePageComponent } from './pages/welcome-page/welcome-page.componen
     HttpClientModule,
     MatCardModule,
     NgbModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: WelcomePageComponent },
-      { path: 'home', component: HomeComponent },
-      { path: 'recipes', component:  VeganRecipesPageComponent},
       { path: 'detail/:id', component: RecipeDetailPageComponent },
+      { path: 'home', component: HomeComponent },
+      { path: 'login', component: LoginPageComponent },
+      { path: 'recipes', component:  VeganRecipesPageComponent},
       { path: 'search/:q', component: SearchComponent },
     ]),
   ],

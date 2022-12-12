@@ -17,7 +17,6 @@ export class HeaderComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log('asdasdasdsa')
     this.sendMessage()
     this.router.navigate(['search',this.query])
   }

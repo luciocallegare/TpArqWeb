@@ -1,9 +1,14 @@
+.navbar-color{
+    background-color: rgba(255, 211, 158, 1);
+}
+
 .nomLogo{
     font-family: "Renaiss Italic";
     font-size: 20px;
 }
+
 .navbar-brand img{
-    max-width: 80px;
+    max-width: 60px;
 }
 
 .btn-avz{

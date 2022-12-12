@@ -1,17 +1,20 @@
 <div *ngIf="recipe;else not_found" >
 
-    <div style="min-height:400px;">
+    <div style="min-height:550px;">
         <h1>{{recipe!.name}}</h1>
         <hr>
         <img [src]="recipe.thumbnail_url" [alt]="recipe.name">
+
         <h5><strong>Description: </strong></h5>
         <span class="text">{{recipe.description}}</span>
+
         <span class="text">
             <fa-icon [icon]="timerIcon"></fa-icon>
             &nbsp; Prep Time: {{recipe.prep_time_minutes}} minutes &nbsp;
             <fa-icon [icon]="timerIcon"></fa-icon>
             &nbsp; Cook Time: {{recipe.cook_time_minutes}} minutes 
         </span>
+
         <span class="text">
             Ratings: &nbsp; 
             <fa-icon [icon]="thumbsUpIcon"></fa-icon>
@@ -19,16 +22,14 @@
             <fa-icon [icon]="thumbsDownIcon"></fa-icon>
             &nbsp; {{recipe.user_ratings.count_negative}}
         </span>
-    </div>
-    
-    <div *ngIf="recipe.instructions">
-        <mat-card>
+
+        <div *ngIf="recipe.instructions">
             <h5><strong>Instructions: </strong></h5>
             <div *ngFor="let step of recipe.instructions">
                 <span class="text">{{step.position}}.&nbsp; {{step.display_text}}</span>
             </div>
-        </mat-card>
-        
+        </div>
+
     </div>
 </div>
 

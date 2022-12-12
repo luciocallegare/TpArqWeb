@@ -8,7 +8,7 @@ import { Recipe, ResponseRecipes } from 'src/models/response-recipes';
 const spoonableApi = 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch'
 const tastyApi = 'https://tasty.p.rapidapi.com/recipes/list';
 const tastyHeaders= {
-  'X-RapidAPI-Key': '6c0973798bmsh5fbea7355e8f3dfp14c46djsne25b27a5e261',
+  'X-RapidAPI-Key': 'e67092ab10mshe80e906f45fa17ap1bd925jsn1e451d4a416e',
   'X-RapidAPI-Host': 'tasty.p.rapidapi.com',
 };
 @Injectable({providedIn: 'root'})
