@@ -1,10 +1,7 @@
+
 .pageTitle{
     margin-top: 20px;
-    color:rgba(206, 78, 78, 1) ;
-}
-.container{
-    display: flex;
-    flex-wrap: wrap;
+    color:rgb(253, 143, 0) ;
 }
 
 .card{
@@ -14,10 +11,22 @@
     border-color:  rgba(206, 78, 78, 0.4);
     border-radius: 20;
     padding: 2em;
-    margin-block: 30px ;
-    width: 600px;
+    margin-block: 10px ;
 }
-.image{border-radius: 5px; max-height: 200;}
+
+.imageDiv{
+    overflow: hidden;
+    text-align: center;
+    border-radius: 5px; 
+    margin-bottom: 20px;
+}
+
+img{
+    object-fit: fill;
+}
+.emptyBox{
+    min-height: 40px;
+}
 
 .content p {
     display: -webkit-box;

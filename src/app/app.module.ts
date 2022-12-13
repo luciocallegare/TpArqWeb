@@ -20,7 +20,7 @@ import { RecipeDetailPageComponent } from './pages/recipe-detail-page/recipe-det
 import { SearchComponent } from './pages/search-page/search.component';
 import { VeganRecipesPageComponent } from './pages/vegan-recipes-page/vegan-recipes-page.component';
 import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
-
+import { GlutenFreeRecipesPageComponent } from './pages/glutenfree-recipes-page/glutenfree-recipes-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +31,7 @@ import { WelcomePageComponent } from './pages/welcome-page/welcome-page.componen
     RecipeDetailPageComponent,
     SearchComponent,
     VeganRecipesPageComponent,
+    GlutenFreeRecipesPageComponent,
     WelcomePageComponent,
     LoaderComponent,
     LoginPageComponent,
@@ -50,7 +51,9 @@ import { WelcomePageComponent } from './pages/welcome-page/welcome-page.componen
       { path: 'home', component: HomeComponent },
       { path: 'login', component: LoginPageComponent },
       { path: 'recipes', component:  VeganRecipesPageComponent},
+      { path: 'recipes/gluten-free', component: GlutenFreeRecipesPageComponent },
       { path: 'search/:q', component: SearchComponent },
+      { path: 'search/detail/:id', component:RecipeDetailPageComponent },
     ]),
   ],
   providers: [],

@@ -1,13 +1,13 @@
 <div class="row align-items-center" style="min-height: 500px;">
   <div class="row">
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-    <label for="first-name">First Name: </label>
+    <label for="username">Username: </label>
     <br>
-    <input id="first-name" type="text" formControlName="firstName">
+    <input id="username" type="text" formControlName="firstName">
     <br>
-    <label for="last-name">Last Name: </label>
+    <label for="password">Password: </label>
     <br>
-    <input id="last-name" type="text" formControlName="lastName">
+    <input id="password" type="password" formControlName="lastName">
     <br>
     <button type="submit" [disabled]="!profileForm.valid">Submit</button>
     <button [routerLink]="'/home'" >Login</button>

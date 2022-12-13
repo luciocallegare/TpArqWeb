@@ -61,6 +61,8 @@ export interface Recipe {
     video_id:                 number | null;
     video_url:                null | string;
     yields:                   string;
+    ingredients:              any,
+    instructionsText:         null | string
 }
 
 export interface Rating {

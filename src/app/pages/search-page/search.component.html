@@ -1,21 +1,19 @@
-<h1 class="pageTitle">Recetas</h1>
+
+<h1 class="pageTitle">Search Results</h1>
 <hr>
-<!-- TODO: add for each and matcards with recipes descriptions  -->
-<div class="row">
-    <div *ngFor="let recipe of recipies" class="col-6">
-        <mat-card class="card">
-            <img  mat-card-image [src]="recipe.image" [alt]="recipe.title" class="image">
-            <h6 class="cardTitle">
-                <!-- TODO: adapt these lines to the recipe list -->
-                {{ recipe.title }}
-                <!-- [title]="recipe.name + ' details'"  -->
-                <!-- [routerLink]="['/products', product.id]" -->
-            </h6>
-            
-            
-    <!--         <mat-card-content class="content">
-              <p *ngIf="recipe.description">Description: {{ recipe.description }}</p> 
-            </mat-card-content> -->
-        </mat-card>
+<div *ngIf="recipes;else not_found">
+    <div class="row">
+        <div *ngFor="let recipe of recipes" class="col-3">
+            <mat-card class="card" [title]="recipe.title + ' details'" [routerLink]="['/search/detail',recipe.id]">
+                <div class="imageDiv">
+                    <img  mat-card-image [src]="recipe.image" [alt]="recipe.title">
+                </div>
+                <h6 class="cardTitle"> {{ recipe.title }} </h6>
+            </mat-card>
+        </div>
     </div>
 </div>
+
+<ng-template #not_found>
+    <app-loader></app-loader>
+</ng-template>

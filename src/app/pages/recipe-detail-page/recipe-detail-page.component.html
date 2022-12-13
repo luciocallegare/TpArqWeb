@@ -5,14 +5,30 @@
         <hr>
         <img [src]="recipe.thumbnail_url" [alt]="recipe.name">
 
-        <h5><strong>Description: </strong></h5>
-        <span class="text">{{recipe.description}}</span>
+        <div *ngIf="recipe.description">
+            <h5><strong>Description: </strong></h5>
+            <span class="text">{{recipe.description}}</span>
+        </div>
+
+        <div *ngIf="recipe.ingredients">
+            <h5><strong>Ingredients: </strong></h5>
+            <ul class="ingredients">
+                <div *ngFor="let ingridient of recipe.ingredients">
+                    <li class="ingridient_detail">
+                        {{ingridient.original}}
+                    </li>
+                </div>
+            </ul>
+        </div>
 
         <span class="text">
             <fa-icon [icon]="timerIcon"></fa-icon>
             &nbsp; Prep Time: {{recipe.prep_time_minutes}} minutes &nbsp;
-            <fa-icon [icon]="timerIcon"></fa-icon>
-            &nbsp; Cook Time: {{recipe.cook_time_minutes}} minutes 
+
+            <div *ngIf="recipe.cook_time_minutes" >
+                <fa-icon [icon]="timerIcon"></fa-icon>
+                &nbsp; Cook Time: {{recipe.cook_time_minutes}} minutes 
+            </div>
         </span>
 
         <span class="text">
@@ -28,6 +44,11 @@
             <div *ngFor="let step of recipe.instructions">
                 <span class="text">{{step.position}}.&nbsp; {{step.display_text}}</span>
             </div>
+        </div>
+
+        <div *ngIf="recipe.instructionsText">
+            <h5><strong>Instructions: </strong></h5>
+            <p>{{recipe.instructionsText}}</p>
         </div>
 
     </div>

@@ -25,7 +25,7 @@ export class SearchComponent implements OnInit {
         window.location.reload()
       });
     }
-  recipies : RecipeListed[] | undefined
+  recipes : RecipeListed[] | undefined
   query: any
   private subscriptionName: Subscription
 
@@ -38,7 +38,7 @@ export class SearchComponent implements OnInit {
   async getRecipies(query: String | null){
     console.log(query)
     let resp = await this.recipesService.searchRecipes(query)
-    this.recipies = resp.data.results
+    this.recipes = resp.data.results
   }
 
   ngOnDestroy() {

@@ -43,5 +43,56 @@ export class RecipesService {
     }
   }
 
+  async fetchRecipeDetail (id: Number | null): Promise <any>{
+    const options = {
+      method: 'GET',
+      url: `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/${id}/information`,
+      headers: {
+        'X-RapidAPI-Key': 'eec24d5e55msh4730e9c66746ee1p13ba37jsn0bbca8bac5c5',
+        'X-RapidAPI-Host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
+      }
+    };
+    
+    try{
+      let recipe = (await axios.request(options)).data
+      return {
+        'name': recipe.title,
+        'thumbnail_url':recipe.image,
+        'instructionsText': recipe.instructions,
+        'prep_time_minutes': recipe.readyInMinutes,
+        'user_ratings':{
+          'count_positive': recipe.aggregateLikes
+        },
+        'ingredients': recipe.extendedIngredients,
+      }
+    }catch (error) {
+      return error
+    }
+
+  }
+
+  async fetchGlutenFree ():Promise <any>{
+    const options = {
+      method: 'GET',
+      url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch',
+      params: {
+        query: 'gluten free',
+        intolerances: 'gluten'
+      },
+      headers: {
+        'X-RapidAPI-Key': 'eec24d5e55msh4730e9c66746ee1p13ba37jsn0bbca8bac5c5',
+        'X-RapidAPI-Host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
+      }
+    };
+    
+    try{
+      let resp = await axios.request(options)
+      return resp
+
+    }catch (error) {
+      return error
+    }   
+  }
+
 
 }

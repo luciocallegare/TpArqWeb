@@ -109,3 +109,12 @@ app-top-bar h1 {
     color: white;
     margin: 0;
 }
+
+.card:hover{
+    cursor: pointer;
+}
+
+.cardTitle{
+    font-family: "Renaiss Italic";
+    font-size: 27px;
+}
