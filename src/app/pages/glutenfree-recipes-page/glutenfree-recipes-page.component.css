@@ -1,0 +1,36 @@
+
+.pageTitle{
+    margin-top: 20px;
+    color:rgb(253, 143, 0) ;
+}
+
+.card{
+    padding-top: 20px;
+    background-color: #fff;
+    box-shadow: 5px 5px 2px rgba(206, 78, 78, 0.2);
+    border-color:  rgba(206, 78, 78, 0.4);
+    border-radius: 20;
+    padding: 2em;
+    margin-block: 10px ;
+}
+
+.imageDiv{
+    overflow: hidden;
+    text-align: center;
+    border-radius: 5px; 
+    margin-bottom: 20px;
+}
+
+img{
+    object-fit: fill;
+}
+.emptyBox{
+    min-height: 40px;
+}
+
+.content p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
