@@ -1,8 +1,23 @@
+h1{
+    padding-top: 30px;
+    color:  rgb(253, 143, 0);
+    text-shadow: 1px 1px 2px pink;
+    text-align: center;
+}
+img{
+    height: 100%;
+    float: left;
+}
 label{
-    padding-top: 20px;
+    padding-top: 14px;
+    text-align: center;
 }
 input{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    max-width: 300px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 }
 button{
     background-color: rgb(253, 143, 0);
