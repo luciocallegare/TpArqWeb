@@ -10,10 +10,11 @@ export class LoginPageComponent {
     profileForm = new FormGroup({
       firstName: new FormControl(''),
       lastName: new FormControl(''),
+      emailAddress: new FormControl(''),
+      password: new FormControl(''),
     });
 
     onSubmit() {
-      // TODO: Use EventEmitter with form value
       console.log(this.profileForm.value);
     }
 

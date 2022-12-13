@@ -1,19 +1,21 @@
 
-<h1 class="pageTitle">Search Results</h1>
-<hr>
-<div *ngIf="recipes;else not_found">
-    <div class="row">
-        <div *ngFor="let recipe of recipes" class="col-3">
-            <mat-card class="card" [title]="recipe.title + ' details'" [routerLink]="['/search/detail',recipe.id]">
-                <div class="imageDiv">
-                    <img  mat-card-image [src]="recipe.image" [alt]="recipe.title">
-                </div>
-                <h6 class="cardTitle"> {{ recipe.title }} </h6>
-            </mat-card>
+<div class="container">
+    <h1 class="pageTitle">Search Results</h1>
+    <hr>
+    <div *ngIf="recipes;else not_found">
+        <div class="row">
+            <div *ngFor="let recipe of recipes" class="col-3">
+                <mat-card class="card" [title]="recipe.title + ' details'" [routerLink]="['/search/detail',recipe.id]">
+                    <div class="imageDiv">
+                        <img  mat-card-image [src]="recipe.image" [alt]="recipe.title">
+                    </div>
+                    <h6 class="cardTitle"> {{ recipe.title }} </h6>
+                </mat-card>
+            </div>
         </div>
     </div>
+    
+    <ng-template #not_found>
+        <app-loader></app-loader>
+    </ng-template>
 </div>
-
-<ng-template #not_found>
-    <app-loader></app-loader>
-</ng-template>
