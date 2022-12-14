@@ -8,14 +8,15 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class LoginPageComponent {
     profileForm = new FormGroup({
-      firstName: new FormControl(''),
-      lastName: new FormControl(''),
+      userName: new FormControl(''),
       emailAddress: new FormControl(''),
       password: new FormControl(''),
     });
 
     onSubmit() {
+      console.log('Successful Login');
       console.log(this.profileForm.value);
+      this.profileForm.reset();
     }
 
 }

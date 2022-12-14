@@ -1,20 +1,18 @@
-<div style="min-height: 500px;">
+<div style="min-height:579px;">
   <div class="image"><img src="assets/img/loginGif.gif" alt="login"></div>
   <div class="row align-items-center">
     <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
       <h1>Sign Up</h1>
       <div class="row">
-        <label for="first-name">First Name: </label>
-        <input id="first-name" type="text" formControlName="firstName">
-        <label for="last-name">Last Name: </label>
-        <input id="last-name" type="text" formControlName="lastName">
+        <label for="user-name">User Name: </label>
+        <input id="user-name" type="text" formControlName="userName">
         <label for="email-address">Email address: </label>
         <input id="email-address" type="text" formControlName="emailAddress">
         <label for="password">Password: </label>
         <input id="password" type="password" formControlName="password">
       </div>
       <button type="submit" [disabled]="!profileForm.valid">Submit</button>
-      <button [routerLink]="'/home'" >Login</button>
+      <button [routerLink]="'/home'">Login</button>
     </form>
   </div>
 </div>
