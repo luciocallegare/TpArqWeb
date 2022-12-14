@@ -1,7 +1,6 @@
 
 <div class="container">
-    <h1 class="pageTitle">Vegan Recipes</h1>
-    <hr>
+    <h1>Vegan Recipes</h1>
     <div *ngIf="recipes;else not_found">
         <div class="row">
             <div *ngFor="let recipe of recipes" class="col-6">
@@ -20,9 +19,9 @@
             </div>
         </div>
     </div>
-    
+
     <ng-template #not_found>
+        <div class="loaderCentered"></div>
         <app-loader></app-loader>
     </ng-template>
-
 </div>
