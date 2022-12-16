@@ -14,6 +14,10 @@
             </div>
         </div>
     </div>
+
+    <div *ngIf="recipes?.length === 0" class="cont_no_results">
+        <img class="mx-auto" src="../../../assets/img/clipart1533013.png" alt="Sorry No Results Found@clipartmax.com">
+    </div>
     
     <ng-template #not_found>
         <app-loader></app-loader>

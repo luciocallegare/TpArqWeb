@@ -34,3 +34,7 @@ img{
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+.cont_no_results{
+    display: flex;
+    margin: 50px;
+}
